@@ -1,0 +1,140 @@
+/* GLOBAL STYLES */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'California Signature', cursive;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* HEADERS */
+.site-header {
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+}
+.main-title {
+  font-size: clamp(2rem, 15vw, 10rem);
+  text-transform: uppercase;
+  transition: text-shadow 0.3s ease;
+}
+.main-title:hover {
+  text-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* MARQUEE ANIMATION */
+.scrolling {
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* NAVIGATION */
+.main-nav ul {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0;
+  margin: 1rem 0;
+}
+.nav-arrow {
+  display: none;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+@media (max-width: 600px) {
+  .nav-arrow {
+    display: block;
+  }
+}
+.arrow-icon {
+  width: 50px;
+  height: 50px;
+  fill: #000;
+  transition: filter 0.3s ease;
+}
+.arrow-link:hover .arrow-icon {
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+}
+
+/* CONTENT */
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+.interactive-element {
+  padding: 20px 40px;
+  border: 2px solid #333;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  font-family: 'Straight Neckline', cursive;
+}
+.interactive-element:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* MINI TOOLS BUTTON */
+#tools-link {
+  margin-top: 2rem;
+}
+.tools-button {
+  display: inline-block;
+  padding: 20px 40px;
+  border: 2px solid #333;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  font-family: 'Straight Neckline', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+.tools-button:hover {
+  background: linear-gradient(135deg, #e0e0e0, #f9f9f9);
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* SCRAMBLE EFFECT */
+.dud {
+  color: #999;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #000;
+  color: #555;
+}
+/* TOOL‑SEITE */
+.tool-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+.tool-section input {
+  margin-bottom: 1rem;
+}
+#audioCanvas {
+  border: 1px solid #333;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
